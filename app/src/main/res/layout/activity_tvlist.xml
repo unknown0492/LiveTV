@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@drawable/transparent"
+    tools:context="com.amlogic.DTVPlayer.TvList" >
+
+    
+    <ImageView 
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/iv_left_arrow"
+        android:src="@drawable/left_arrow"
+        android:alpha="0.0"
+        />
+    
+    <ListView
+        android:id="@+id/list_main"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp" 
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:listSelector="@drawable/main_list_selector"
+        android:divider="@null" 
+        android:scrollbars="none"
+        android:focusable="true">
+    </ListView>
+    
+    <ImageView
+        android:id="@+id/iv_right_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/list_main"
+        android:padding="10dp" 
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/right_arrow" />
+    
+    <TextView
+        android:id="@+id/tv_category_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:gravity="center"
+        android:padding="40dp"
+        android:text="TextView"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+    
+	<ListView
+        android:id="@+id/list_sub"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="300dp"
+        android:divider="@null"
+        android:layout_marginTop="100dp"
+        android:scrollbars="none"
+        android:focusable="true"
+        android:visibility="visible"
+        android:paddingBottom="25dp"
+        android:background="@drawable/sub_list_background"
+        android:listSelector="@drawable/main_list_selector">
+    </ListView>
+    
+	<TextView 
+        android:layout_width="200dp" 
+        android:layout_height="wrap_content" 
+        android:textSize="70sp" 
+        android:id="@+id/tv_channel_no1" 
+        android:gravity="center_horizontal"
+	    android:layout_marginRight="50dp"
+	    android:layout_above="@+id/ll_tv_channel_info"
+	    android:layout_alignParentRight="true"
+        android:text="50" />
+    
+	<LinearLayout	
+	    android:layout_width="200dp"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_horizontal"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentEnd="true"
+	    android:layout_marginRight="50dp"
+	    android:layout_marginBottom="50dp"
+	    android:id="@+id/ll_tv_channel_info"
+	    android:orientation="vertical" >
+	    
+	    <TextView 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="match_parent"
+	        android:text="Now Showing"
+	        android:padding="5dp"
+	        android:paddingBottom="30dp"
+	        android:textSize="25sp" />
+	    
+	    <ImageView 
+	        android:layout_width="73dp"
+	        android:layout_height="45dp"
+			android:background="@drawable/icon_adithya_tv"
+			android:id="@+id/iv_channel_icon1"
+	        />
+	    
+	    <TextView 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="match_parent"
+	        android:text="Adithya TV"
+	        android:id="@+id/tv_channel_name1"
+	        android:padding="5dp"
+	        android:textStyle="bold"
+	        android:textSize="20sp" />
+
+	</LinearLayout>
+
+</RelativeLayout>
